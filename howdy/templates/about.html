@@ -1,0 +1,101 @@
+<!-- howdy/templates/about.html -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Howdy!</title>
+        <style>
+            /* body {font-family: Arial, Helvetica, sans-serif;} */
+      
+            input[type=number], select, textarea {
+                width: 100%;
+                padding: 12px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                box-sizing: border-box;
+                margin-top: 6px;
+                margin-bottom: 16px;
+                resize: vertical;
+            }
+            input[type=text], select, textarea {
+                width: 100%;
+                padding: 12px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                box-sizing: border-box;
+                margin-top: 6px;
+                margin-bottom: 16px;
+                resize: vertical;
+            }
+      
+            input[type=submit] {
+                background-color: #4CAF50;
+                color: white;
+                padding: 12px 20px;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+            }
+      
+            input[type=submit]:hover {
+                background-color: #45a049;
+            }
+      
+            .container {
+              display: flex;
+              border-radius: 5px;
+              background-color: #f2f2f2;
+              padding: 20px;
+      
+      
+              }
+              .container > div {
+                flex: 1; /*grow*/
+              }
+              .distance {
+                margin-left: 15px;
+      
+                }
+            </style>
+    </head>
+    <body>
+        <br>        <br>        <br>
+    <center>
+      <h1>Stock Profit Calculator</h2>
+      <h3>HW1 - CMPE285</h3>
+    </center>
+      <div class="distance">
+        <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <!-- <label for="TickerSymbol">Ticker Symbol</label>
+        <input type="text" id="TickerSymbol" name="TickerSymbol" placeholder="Ticker Symbol">
+    
+        <label for="Allotment">Allotment</label>
+        <input type="number" id="Allotment" name="Allotment" placeholder="Allotment">
+    
+        <label for="FinalSharePrice">Final Share Price</label>
+        <input type="number" id="FinalSharePrice" name="FinalSharePrice" placeholder="Final Share Price">
+
+        <label for="SellCommission">Sell Commission</label>
+        <input type="number" id="SellCommission" name="SellCommission" placeholder="Sell Commission">
+
+        <label for="InitialSharePrice">Initial Share Price</label>
+        <input type="number" id="InitialSharePrice" name="InitialSharePrice" placeholder="Initial Share Price">
+
+        <label for="BuyCommission">Buy Commission</label>
+        <input type="number" id="BuyCommission" name="BuyCommission" placeholder="Buy Commission">
+
+        <label for="CapitalGainTaxRate">Capital Gain Tax Rate (%)</label>
+        <input type="number" id="CapitalGainTaxRate" name="CapitalGainTaxRate" placeholder="Capital Gain Tax Rate (%)">
+     -->
+        <input type="submit" value="Submit">
+        </form>
+      </div>
+        <br> <br> <br> <br>
+        <center><footer>
+                © Created by Abhishek Yadav, All Rights Reserved
+        </footer></center>
+    </body>
+    
+</html>
